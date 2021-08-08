@@ -65,7 +65,8 @@ export default function Home() {
         <Head>
           <title>Face2Emoji</title>
           <meta name="description" content="Mask Emoji to your face" />
-          <link rel="icon" href="/favicon.ico" />
+          <meta property="og:image" key="ogImage" content="/emojis/happy.png" />
+          <link rel="icon" href="/emojis/happy.png" />
         </Head>
         <header className={styles.header}>
           <h1 className={styles.title}>Face2Emoji</h1>
