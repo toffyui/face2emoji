@@ -39,4 +39,6 @@
   top: 20px;
   right: 0;
   margin: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }

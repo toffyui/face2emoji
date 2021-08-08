@@ -47,6 +47,7 @@ export default function Home() {
           .detectAllFaces(video, new faceapi.SsdMobilenetv1Options())
           .withFaceExpressions();
         if (detectionsWithExpressions.length > 0) {
+          canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
           drawEmoji(detectionsWithExpressions, canvasRef.current);
         }
         requestAnimationFrame(draw);
