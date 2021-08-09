@@ -14,7 +14,7 @@ export default function Home() {
   const loadModels = async () => {
     const MODEL_URL = `/models`;
     await Promise.all([
-      faceapi.nets.ssdMobilenetv1.load(MODEL_URL),
+      faceapi.nets.tinyFaceDetector.load(MODEL_URL),
       faceapi.nets.faceExpressionNet.load(MODEL_URL),
     ]);
   };
@@ -44,10 +44,9 @@ export default function Home() {
       const video = webcamRef.current.video;
       (async function draw() {
         const detectionsWithExpressions = await faceapi
-          .detectAllFaces(video, new faceapi.SsdMobilenetv1Options())
+          .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
           .withFaceExpressions();
         if (detectionsWithExpressions.length > 0) {
-          canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
           drawEmoji(detectionsWithExpressions, canvasRef.current);
         }
         requestAnimationFrame(draw);
