@@ -2,7 +2,8 @@
 
 DEMO
 
-[![Image from Gyazo](https://i.gyazo.com/c20f064084a23c5e5a11cb2068623d6f.gif)](https://gyazo.com/c20f064084a23c5e5a11cb2068623d6f)
+![c20f064084a23c5e5a11cb2068623d6f](https://user-images.githubusercontent.com/43722788/128670696-e4009260-9060-4b59-93f0-821297e7db53.gif)
+
 
 https://face2emoji.vercel.app/
 
